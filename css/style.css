@@ -1,0 +1,733 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* begin van de navigatie */
+
+/* Bron: https://www.youtube.com/watch?v=xMTs8tAapnQ */
+
+header {
+    background-color: #5daaba;
+    margin: -1em;
+    height: 6em;
+    display: flex;
+}
+
+header img {
+    height: 4em;
+    width: 7em;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    z-index: 1;
+}
+
+.nav {
+    line-height: 70px;
+    text-align: right;
+    width: 100%;
+}
+
+.menu {
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.menu a {
+    font-family: monospace;
+    clear: right;
+    text-decoration: none;
+    color: #eed4d6;
+    margin-left: 12px;
+    margin-right: 0px;
+    line-height: 70px;
+    font-size: 17px;
+    border-right: 1px solid #eed4d6;
+    padding-right: 13px;
+}
+
+.menu a:hover {
+    color: #c85379;
+
+}
+
+label {
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 35px;
+    color: #eed4d6;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+/* einde navigatie */
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+    padding-top: 1em;
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 15em;
+}
+
+h2 {
+    margin: 1em;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: monospace;
+    font-size: 20px;
+    color: #5daaba;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+    color: #5daaba;
+    font-size: 18px;
+}
+
+
+/* Begin homepagina */
+.homeimg {
+    width: 35em;
+    height: 26em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zoekscherm {
+    padding: 20px;
+    border: none;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #5daaba;
+    color: white;
+    margin-bottom: 4em;
+}
+
+/* einde homepagina */
+
+/* Begin zoekpagina*/
+
+container {
+    /* Code geleerd van Rowin */
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, auto);
+    overflow-x: scroll;
+    justify-items: center;
+    grid-gap: 10px;
+    margin: 3px;
+}
+
+.searchfield {
+    align-content: center;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    display: inline;
+    margin-left: 40%;
+    background-color: #eed4d6;
+
+}
+
+.searchbutton {
+    align-content: center;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    display: inline;
+    background-color: #5daaba;
+    color: white;
+}
+
+.filterbutton {
+    align-content: center;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    display: inline;
+    text-decoration: underline;
+    margin-left: 10px;
+    color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-top: 0;
+
+}
+
+article {
+    background-color: #eed4d6;
+    border-radius: 2em;
+    width: 20em;
+    height: 26em;
+    margin: 2em;
+    padding: 1em;
+    justify-content: center;
+}
+
+.filtersection {
+    display: none;
+}
+
+
+.filter-active {
+    width: 45em;
+    height: 12em;
+    margin: 3em;
+    padding: 2em;
+    padding-top: 0.1em;
+    justify-content: center;
+    background-color: #eed4d6;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-top: 2%;
+    border-radius: 2em;
+
+}
+
+.filter {
+    width: 11em;
+    height: 12em;
+    margin-top: 3.5em;
+    border-radius: none;
+}
+
+.filter:hover {
+    background-color: #eed4d6;
+}
+
+article img {
+    width: 100%;
+    height: 10em;
+    align-content: center;
+}
+
+article H3 {
+    text-align: center;
+    font-family: monospace;
+}
+
+article p {
+    text-align: center;
+    height: 125px;
+}
+
+.bekijk {
+    margin: 1.5em;
+    margin-left: 75px;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    display: inline;
+    background-color: #5daaba;
+    color: white;
+}
+
+article:hover {
+    background-color: lightpink;
+}
+
+/* einde zoekpagina*/
+
+/* Begin detailpagina*/
+
+/*  Om ervoor te zorgen dat de achtergrond responsive is heb ik deze bron gebruikt: Bron:https://www.webfx.com/blog/web-design/responsive-background-image/*/
+.backgroundimg {
+    background-image: url(/img/detailbackground.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Bron: https://netspecialist.nl/html-en-css/519-een-slideshow-widget-maken */
+.slideshow {
+    width: 40em;
+    height: 28em;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow img {
+    position: absolute;
+    animation: slideshow 20s infinite;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+}
+
+.foodtruckinfo {
+    display: block;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes slideshow {
+    25% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+}
+
+.slideshow img:nth-child(4) {
+    animation-delay: 0s;
+}
+
+.slideshow img:nth-child(3) {
+    animation-delay: 5s;
+}
+
+.slideshow img:nth-child(2) {
+    animation-delay: 10s;
+}
+
+.slideshow img:nth-child(1) {
+    animation-delay: 15s;
+}
+
+.symbolimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactbtn {
+    padding: 15px;
+    border: none;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #5daaba;
+    color: white;
+}
+
+.beoordeling {
+    display: block;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.beoordeling h4 {
+    font-size: 20px;
+    margin-top: 1em;
+}
+
+.beoordeling label {
+    display: inline;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.beoordeling input {
+    width: 20em;
+    height: 2.5em;
+    font-family: sans-serif;
+    font-size: 0.93em;
+}
+
+.beoordeling textarea {
+    width: 35em;
+    height: 6em;
+    font-family: sans-serif;
+    font-size: 0.93em;
+}
+
+.beoordeling input[type="submit"] {
+    padding: 15px;
+    border: none;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    background-color: #5daaba;
+    color: white;
+    width: 10em;
+    height: 2.8em;
+}
+
+/* einde detailpagina*/
+
+/* footer */
+
+footer {
+    background-color: #5daaba;
+    width: 100%;
+    color: #eed4d6;
+    height: 7em;
+    padding: 0.5em;
+    bottom: 0px;
+    text-align: center;
+}
+
+footer h4:nth-child(2) {
+    text-align: start;
+     !important font-size: 16px;
+}
+
+
+h4 {
+    margin-bottom: 0.1em;
+    font-family: serif;
+    font-size: 16px;
+}
+
+.nieuwsfield {
+    padding: 6px;
+    margin-top: 0.1em;
+    border: none;
+    font-size: 17px;
+    background-color: #eed4d6;
+    display: flex-end;
+
+}
+
+.nieuwsbutton {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    background-color: #eed4d6;
+    color: #5daaba;
+
+}
+
+/* nav media query */
+@media only screen and (max-width: 810px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #eed4d6;
+        margin: 0px;
+        color: #eed4d6;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+        background-color: #5daaba;
+    }
+
+    .nav {
+        z-index: 1;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    container {
+        overflow-x: hidden;
+    }
+
+    footer {
+        overflow-x: hidden;
+    }
+}
+
+/* zoekeenfootrucks.html media queries */
+
+@media only screen and (max-width: 1000px) {
+
+    .filter-active {
+        width: 45em;
+        height: 12em;
+        margin: 3em;
+        padding: 2em;
+        padding-top: 0.1em;
+        justify-content: center;
+        background-color: #eed4d6;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 2em;
+
+    }
+
+}
+
+@media only screen and (max-width: 770px) {
+
+
+    .filter-active {
+        width: 35em;
+        height: 11em;
+        margin: 3em;
+        padding: 2em;
+        padding-top: 0.1em;
+        justify-content: center;
+        background-color: #eed4d6;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 2em;
+
+    }
+
+
+    .filter {
+        width: 11em;
+        height: 12em;
+        margin-top: 3.5em;
+        border-radius: none;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+
+}
+
+@media only screen and (max-width: 610px) {
+
+
+    .filter-active {
+        width: 30em;
+        height: 10em;
+        margin: 3em;
+        padding: 2em;
+        padding-top: 0.1em;
+        justify-content: center;
+        background-color: #eed4d6;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+        margin-top: 2%;
+        border-radius: 2em;
+    }
+
+
+
+
+    .filter {
+        width: 11em;
+        height: 8em;
+        margin-top: 2.5em;
+        border-radius: none;
+        margin-left: 0.07em;
+        margin-right: 0.07em;
+        font-size: 14px;
+    }
+
+
+}
+
+@media only screen and (max-width: 675px) {
+
+    .searchfield {
+        align-content: center;
+        padding: 6px;
+        border: none;
+        font-size: 17px;
+        display: inline;
+        margin-left: 20%;
+        background-color: #eed4d6;
+
+    }
+
+}
+
+/* detailpagina's media queries */
+
+@media only screen and (max-width: 720px) {
+
+    .slideshow {
+        width: 35em;
+        height: 23em;
+        padding: 5px;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foodtruckinfo {
+        display: block;
+        width: 32em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .symbolimg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .beoordeling {
+        display: block;
+        width: 32em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .beoordeling h4 {
+        font-size: 20px;
+        margin-top: 1em;
+    }
+
+    .beoordeling label {
+        display: inline;
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .beoordeling input {
+        width: 20em;
+        height: 2.5em;
+        font-family: sans-serif;
+        font-size: 0.93em;
+    }
+
+    .beoordeling textarea {
+        width: 35em;
+        height: 6em;
+        font-family: sans-serif;
+        font-size: 0.93em;
+    }
+
+    .beoordeling input[type="submit"] {
+        padding: 15px;
+        border: none;
+        font-size: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        background-color: #5daaba;
+        color: white;
+        width: 10em;
+        height: 2.8em;
+    }
+
+}
+
+
+@media only screen and (max-width: 580px) {
+
+    .slideshow {
+        width: 30em;
+        height: 20em;
+        padding: 5px;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foodtruckinfo {
+        display: block;
+        width: 28em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .beoordeling {
+        display: block;
+        width: 28em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .beoordeling label {
+        display: inline;
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .beoordeling input {
+        width: 25em;
+        height: 3em;
+        font-family: sans-serif;
+        font-size: 0.93em;
+    }
+
+    .beoordeling h4 {
+        font-size: 18px;
+    }
+
+    .beoordeling textarea {
+        width: 35em;
+        height: 6em;
+        font-family: sans-serif;
+        font-size: 0.93em;
+    }
+
+    .beoordeling input[type="submit"] {
+        padding: 15px;
+        border: none;
+        font-size: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        background-color: #5daaba;
+        color: white;
+        width: 10em;
+        height: 2.8em;
+    }
+
+
+
+
+}
